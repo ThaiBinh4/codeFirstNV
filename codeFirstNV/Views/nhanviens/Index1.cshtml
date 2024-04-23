@@ -1,0 +1,47 @@
+﻿@model IEnumerable<codeFirstNV.Models.nhanvien>
+
+@{
+    ViewData["Title"] = "Index1";
+}
+
+<h1>Hiển thị thông tin nhân viên phòng marketing và 30-40 tuổi</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tuoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idphongban)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tuoi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idphongban)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdNV">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdNV">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdNV">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

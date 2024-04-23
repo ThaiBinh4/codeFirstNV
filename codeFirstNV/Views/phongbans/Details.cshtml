@@ -1,0 +1,30 @@
+﻿@model codeFirstNV.Models.phongban
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>phongban</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Namephongban)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Namephongban)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idcongty)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idcongty)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Idphongban">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
